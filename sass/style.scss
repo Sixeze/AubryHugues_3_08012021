@@ -1,0 +1,28 @@
+.block-page {
+    width: auto;
+    border: 1px solid red;
+}
+header {
+    border: 1px solid rgb(228, 110, 110);
+        .logo {
+            border: 1px solid green;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            img {
+                width: 50%;
+
+            }
+        }
+
+}
+
+footer {
+    background-color: rgb(87, 82, 82);
+    
+    img {
+        margin: 1vh;
+        width: 30%;
+        color: white;
+    }
+}
