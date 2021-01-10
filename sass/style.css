@@ -15,12 +15,39 @@ li {
 
 .block-page {
   width: auto;
-  border: 1px solid red;
 }
 
 a {
   text-decoration: none;
   color: black;
+}
+
+.row-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.column-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header {
@@ -45,35 +72,88 @@ header .logo img {
   width: 50%;
 }
 
+.head-section {
+  height: 340px;
+}
+
+.head-section h2 {
+  width: 95%;
+}
+
+ul {
+  padding: 0px;
+}
+
+.app-work {
+  border-radius: 20px;
+  background-color: #f2f2f2;
+  -webkit-box-shadow: 3px 3px 5px 2px lightgray;
+          box-shadow: 3px 3px 5px 2px lightgray;
+  width: 100%;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.app-work__number {
+  color: #fff;
+  background-color: #9356DC;
+  width: 29px;
+  height: 25px;
+  border-radius: 40px;
+  display: block;
+  margin-left: -10px;
+  text-align: center;
+  padding-top: 4px;
+}
+
+.app-work__icons {
+  color: #423f3f;
+  margin-left: 30px;
+  width: 20px;
+  text-align: center;
+}
+
+.app-work__txt {
+  margin-left: 40px;
+  width: 200px;
+}
+
+.app-work:hover {
+  background-color: rgba(146, 86, 220, 0.156);
+}
+
+.app-work:hover .app-work__icons {
+  color: #9356DC;
+}
+
 .mid-section {
-  border: 1px solid orange;
   background-color: #f2f2f2;
   height: 180vh;
 }
 
 .restaurants {
-  width: 98%;
-  height: 300px;
+  width: 90%;
+  height: 280px;
   border-radius: 30px;
   margin-bottom: 20px;
   background-color: #fff;
-  -webkit-box-shadow: 8px 8px 8px #f2f2f2;
-          box-shadow: 8px 8px 8px #f2f2f2;
+  -webkit-box-shadow: 8px 5px 5px 2px lightgray;
+          box-shadow: 8px 5px 5px 2px lightgray;
 }
 
 .restaurants__link--pictures {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
-  height: 200px;
+  height: 180px;
   border-radius: 30px 30px 0px 0px;
 }
 
 span {
   background-color: #99E2D0;
   position: relative;
-  left: 70vw;
-  bottom: 20vh;
+  left: 260px;
+  bottom: 140px;
   z-index: 1;
   font-size: 4vw;
   padding: 2vw;
@@ -81,10 +161,12 @@ span {
 
 footer {
   background-color: #424141;
+  height: 200px;
 }
 
 footer .logo {
-  margin: 1vh;
+  margin: 10px;
+  margin-bottom: -10px;
   width: 30%;
 }
 
@@ -92,7 +174,22 @@ footer .color-logo {
   fill: white;
 }
 
-footer p {
+footer ul {
+  height: 150px;
+  padding-left: 10px;
+}
+
+footer ul li {
+  margin-bottom: 15px;
+}
+
+footer ul li a {
   color: #fff;
+}
+
+footer ul li a i {
+  width: 20px;
+  text-align: center;
+  margin-right: 10px;
 }
 /*# sourceMappingURL=style.css.map */
