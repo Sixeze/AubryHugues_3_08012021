@@ -18,7 +18,170 @@ a {
   color: black;
 }
 
+header {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .left-arrow {
+  position: absolute;
+  left: 10px;
+  width: 40px;
+  height: 25px;
+  text-align: center;
+  padding-top: 10px;
+}
+
 header .logo {
+  width: 200px;
+  height: 40px;
+  position: relative;
+}
+
+header .logo img {
+  width: 100%;
+}
+
+.bg-menu {
+  overflow: hidden;
+  height: 250px;
+}
+
+.bg-menu .bg-image {
+  width: 100%;
+  height: 250px;
+}
+
+.main-menu {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 1500px;
+  bottom: 80px;
+  background-color: #f2f2f2;
+  border-radius: 40px 40px 0px 0px;
+}
+
+.main-menu h1 {
+  margin-top: -40px;
+  margin-right: 120px;
+}
+
+.main-menu .custom-checkbox input[type="checkbox"],
+.main-menu .custom-checkbox .checked {
+  display: none;
+}
+
+.main-menu .custom-checkbox input[type="checkbox"]:checked ~ .checked {
+  display: inline-block;
+}
+
+.main-menu .custom-checkbox input[type="checkbox"]:checked ~ .unchecked {
+  display: none;
+}
+
+.main-menu .custom-checkbox {
+  position: absolute;
+  left: 85%;
+  top: 40px;
+}
+
+.main-menu .custom-checkbox .unchecked, .main-menu .custom-checkbox .checked {
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.main-menu .custom-checkbox .unchecked {
+  color: #f2f2f2;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-filter: drop-shadow(0px 0px 4px black);
+          filter: drop-shadow(0px 0px 4px black);
+}
+
+.main-menu .custom-checkbox .checked {
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-filter: drop-shadow(0px 0px 8px #FF79DA);
+          filter: drop-shadow(0px 0px 8px #FF79DA);
+}
+
+.main-menu .btn {
+  font-weight: 550;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  width: 180px;
+  height: 40px;
+  border-radius: 20px;
+  -webkit-box-shadow: 2px 2px 4px 0px gray;
+          box-shadow: 2px 2px 4px 0px gray;
+  border: none;
+  color: #fff;
+  outline: none;
+}
+
+.menu-choice {
+  border: 1px solid red;
+  width: 99%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu-choice h2 {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  text-transform: uppercase;
+}
+
+.menu-choice .green-line {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  height: 3px;
+  width: 60px;
+  background-color: #99E2D0;
+}
+
+.menu-choice .dish-container {
+  margin-top: 10px;
+  border-radius: 20px;
+  background-color: #fff;
+  -webkit-box-shadow: 5px 5px 5px gray;
+          box-shadow: 5px 5px 5px gray;
+  height: 60px;
+  width: 95%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -28,14 +191,6 @@ header .logo {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 50px;
-}
-
-header .logo img {
-  width: 50%;
 }
 
 .navigation .position {
@@ -61,7 +216,7 @@ header .logo img {
 }
 
 .navigation .description {
-  height: 250px;
+  height: 300px;
   background: #f2f2f2;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -79,20 +234,20 @@ header .logo img {
 }
 
 .navigation .description h1 {
-  border: 1px solid red;
-  width: 60%;
+  width: 65%;
   text-align: center;
 }
 
 .navigation .description p {
-  border: 1px solid red;
   width: 70%;
   text-align: center;
 }
 
 .navigation .description .btn {
-  background: #9356DC;
-  width: 200px;
+  font-weight: 550;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  width: 180px;
   height: 40px;
   border-radius: 20px;
   -webkit-box-shadow: 2px 2px 4px 0px gray;
@@ -194,11 +349,12 @@ ul {
           align-items: center;
   background-color: #f2f2f2;
   margin-top: 50px;
+  margin-bottom: 180px;
 }
 
-.restaurants {
+.cards {
   width: 90%;
-  height: 280px;
+  height: 250px;
   padding: 0px;
   border-radius: 30px;
   margin-bottom: 30px;
@@ -207,7 +363,7 @@ ul {
           box-shadow: 8px 5px 5px 2px lightgray;
 }
 
-.restaurants__link--pictures {
+.cards__link--pictures {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
@@ -215,7 +371,7 @@ ul {
   border-radius: 30px 30px 0px 0px;
 }
 
-.restaurants__link--text {
+.cards__link--text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -226,32 +382,57 @@ ul {
   margin-top: 0px;
 }
 
-.restaurants__link--text h3, .restaurants__link--text p {
+.cards__link--text h3, .cards__link--text p {
   margin: 3px;
   height: 20px;
   width: 200px;
   margin-left: 10px;
 }
 
-.restaurants__link--text i {
-  position: relative;
-  left: 320px;
-  bottom: 40px;
-  width: 35px;
-  height: 35px;
-  color: white;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-filter: drop-shadow(0px 0px 2px black);
-          filter: drop-shadow(0px 0px 2px black);
-  -webkit-transition: all 1000ms;
-  transition: all 1000ms;
+.cards .custom-checkbox input[type="checkbox"],
+.cards .custom-checkbox .checked {
+  display: none;
 }
 
-.restaurants__link--text i:active {
-  color: linear-gradient(to right top, #c516cd, #b60fd2, #a40cd7, #900fdc, #7715e1);
-  -webkit-filter: drop-shadow(0px 0px 2px #FF79DA);
-          filter: drop-shadow(0px 0px 2px #FF79DA);
+.cards .custom-checkbox input[type="checkbox"]:checked ~ .checked {
+  display: inline-block;
+}
+
+.cards .custom-checkbox input[type="checkbox"]:checked ~ .unchecked {
+  display: none;
+}
+
+.cards .custom-checkbox {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: absolute;
+  -webkit-transform: translate(300px, -40px);
+          transform: translate(300px, -40px);
+}
+
+.cards .custom-checkbox .unchecked, .cards .custom-checkbox .checked {
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.cards .custom-checkbox .unchecked {
+  color: #f2f2f2;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-filter: drop-shadow(0px 0px 4px black);
+          filter: drop-shadow(0px 0px 4px black);
+}
+
+.cards .custom-checkbox .checked {
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-filter: drop-shadow(0px 0px 8px #FF79DA);
+          filter: drop-shadow(0px 0px 8px #FF79DA);
 }
 
 .new-restaurant {
@@ -268,8 +449,8 @@ ul {
   background-color: #99E2D0;
   color: green;
   position: absolute;
-  -webkit-transform: translate(260px, 20px);
-          transform: translate(260px, 20px);
+  -webkit-transform: translate(262px, 40px);
+          transform: translate(262px, 40px);
   font-size: 1.2rem;
   text-align: center;
   width: 80px;
@@ -279,7 +460,7 @@ ul {
 
 footer {
   background-color: #424141;
-  margin-top: 20px;
+  margin-top: -120px;
   height: 200px;
 }
 
