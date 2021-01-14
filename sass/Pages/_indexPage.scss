@@ -30,8 +30,11 @@
 .head-section {
     @include column-flex();
     height: 300px;
+    margin-top: $margin-section;
     h2 {
-        width: 95%;
+        width: 80%;
+        align-self: start;
+        margin-left: 30px;
     }
 }
 
