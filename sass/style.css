@@ -4,6 +4,7 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  padding: 0px;
 }
 
 body, .head-h1 {
@@ -159,8 +160,7 @@ footer ul li a i {
 .navigation .description .btn:active {
   -webkit-transform: scale(1);
           transform: scale(1);
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
-  background: linear-gradient(#9356DC, #FF79DA);
+  background: radial-gradient(circle, #FF79DA 0%, #9356DC 100%);
   -webkit-filter: drop-shadow(0px 0px 3px #FF79DA);
           filter: drop-shadow(0px 0px 3px #FF79DA);
   -webkit-box-shadow: 2px 2px 10px 2px #9356DC;
@@ -182,10 +182,15 @@ footer ul li a i {
       -ms-flex-align: center;
           align-items: center;
   height: 300px;
+  margin-top: 50px;
 }
 
 .head-section h2 {
-  width: 95%;
+  width: 80%;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  margin-left: 30px;
 }
 
 ul {
@@ -259,6 +264,13 @@ ul {
   background-color: #f2f2f2;
   margin-top: 50px;
   margin-bottom: 180px;
+}
+
+.mid-section h2 {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  margin-left: 30px;
 }
 
 .cards {
@@ -473,8 +485,7 @@ ul {
 .main-menu .btn:active {
   -webkit-transform: scale(1);
           transform: scale(1);
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
-  background: linear-gradient(#9356DC, #FF79DA);
+  background: radial-gradient(circle, #FF79DA 0%, #9356DC 100%);
   -webkit-filter: drop-shadow(0px 0px 3px #FF79DA);
           filter: drop-shadow(0px 0px 3px #FF79DA);
   -webkit-box-shadow: 2px 2px 10px 2px #9356DC;
@@ -482,7 +493,6 @@ ul {
 }
 
 .menu-choice {
-  border: 1px solid red;
   width: 99%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -497,12 +507,16 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .menu-choice h2 {
   -ms-flex-item-align: start;
       -ms-grid-row-align: start;
       align-self: start;
+  padding-left: 10px;
   text-transform: uppercase;
 }
 
@@ -510,14 +524,16 @@ ul {
   -ms-flex-item-align: start;
       -ms-grid-row-align: start;
       align-self: start;
+  margin-left: 10px;
+  margin-top: -20px;
   height: 3px;
   width: 60px;
   background-color: #99E2D0;
 }
 
-.menu-choice .dish-container {
-  margin-top: 10px;
+.dish-container {
   border-radius: 20px;
+  margin-top: 20px;
   background-color: #fff;
   -webkit-box-shadow: 5px 5px 5px gray;
           box-shadow: 5px 5px 5px gray;
@@ -526,11 +542,67 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.dish-container__txt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  padding-top: 2px;
+  width: 80%;
+  height: 60px;
+}
+
+.dish-container__txt h3, .dish-container__txt p {
+  margin: 0px;
+  padding-left: 15px;
+  padding-top: 4px;
+}
+
+.dish-container__txt p {
+  font-size: 0.9rem;
+}
+
+.dish-container__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: baseline;
+      -ms-flex-pack: baseline;
+          justify-content: baseline;
+  width: 25%;
+}
+
+.dish-container__price p {
+  margin-top: 0px;
+  width: 50px;
+  height: 60px;
+  text-align: center;
+  padding-top: 25%;
+}
+
+.dish-container__price--click {
+  background-color: #99E2D0;
+  border-radius: 0px 20px 20px 0px;
+  width: 70px;
+  height: 60px;
+  text-align: center;
+  padding-top: 15%;
+}
+
+.fa-check-circle {
+  color: #fff;
+  background: #99E2D0;
 }
 /*# sourceMappingURL=style.css.map */
