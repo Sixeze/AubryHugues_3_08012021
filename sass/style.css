@@ -1,10 +1,106 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@-webkit-keyframes liking {
+  from {
+    background: #FF79DA;
+    background: -webkit-gradient(linear, left bottom, left top, from(#FF79DA), color-stop(0%, #fff));
+    background: linear-gradient(to top, #FF79DA 0%, #fff 0%);
+    background-size: auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  20% {
+    background: #FF79DA;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(20%, #FF79DA), color-stop(20%, #fff));
+    background: linear-gradient(to top, #FF79DA 20%, #fff 20%);
+    background-size: auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  40% {
+    background: #FF79DA;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(40%, #FF79DA), color-stop(40%, #fff));
+    background: linear-gradient(to top, #FF79DA 40%, #fff 40%);
+    background-size: auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  60% {
+    background: #FF79DA;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(60%, #FF79DA), color-stop(60%, #fff));
+    background: linear-gradient(to top, #FF79DA 60%, #fff 60%);
+    background-size: auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  80% {
+    background: #FF79DA;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(80%, #FF79DA), color-stop(80%, #fff));
+    background: linear-gradient(to top, #FF79DA 80%, #fff 80%);
+    background-size: auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+}
+@keyframes liking {
+  from {
+    background: #FF79DA;
+    background: -webkit-gradient(linear, left bottom, left top, from(#FF79DA), color-stop(0%, #fff));
+    background: linear-gradient(to top, #FF79DA 0%, #fff 0%);
+    background-size: auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  20% {
+    background: #FF79DA;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(20%, #FF79DA), color-stop(20%, #fff));
+    background: linear-gradient(to top, #FF79DA 20%, #fff 20%);
+    background-size: auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  40% {
+    background: #FF79DA;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(40%, #FF79DA), color-stop(40%, #fff));
+    background: linear-gradient(to top, #FF79DA 40%, #fff 40%);
+    background-size: auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  60% {
+    background: #FF79DA;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(60%, #FF79DA), color-stop(60%, #fff));
+    background: linear-gradient(to top, #FF79DA 60%, #fff 60%);
+    background-size: auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  80% {
+    background: #FF79DA;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(80%, #FF79DA), color-stop(80%, #fff));
+    background: linear-gradient(to top, #FF79DA 80%, #fff 80%);
+    background-size: auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0px;
+  outline: 0;
 }
 
 body, .head-h1 {
@@ -22,6 +118,35 @@ li {
 a {
   text-decoration: none;
   color: black;
+}
+
+.btn {
+  font-weight: 550;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  width: 180px;
+  height: 40px;
+  border-radius: 20px;
+  -webkit-box-shadow: 2px 2px 4px 0px gray;
+          box-shadow: 2px 2px 4px 0px gray;
+  border: none;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 300ms, delay 600ms;
+  transition: all 300ms, delay 600ms;
+}
+
+.btn:active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  background: radial-gradient(circle, #FF79DA 0%, #9356DC 100%);
+  -webkit-filter: drop-shadow(0px 0px 3px #FF79DA);
+          filter: drop-shadow(0px 0px 3px #FF79DA);
+  -webkit-box-shadow: 2px 2px 10px 2px #9356DC;
+          box-shadow: 2px 2px 10px 2px #9356DC;
 }
 
 header {
@@ -136,35 +261,6 @@ footer ul li a i {
 .navigation .description p {
   width: 70%;
   text-align: center;
-}
-
-.navigation .description .btn {
-  font-weight: 550;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(#FF79DA, #9356DC);
-  width: 180px;
-  height: 40px;
-  border-radius: 20px;
-  -webkit-box-shadow: 2px 2px 4px 0px gray;
-          box-shadow: 2px 2px 4px 0px gray;
-  border: none;
-  color: #fff;
-  outline: none;
-  cursor: pointer;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: all 300ms, delay 600ms;
-  transition: all 300ms, delay 600ms;
-}
-
-.navigation .description .btn:active {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  background: radial-gradient(circle, #FF79DA 0%, #9356DC 100%);
-  -webkit-filter: drop-shadow(0px 0px 3px #FF79DA);
-          filter: drop-shadow(0px 0px 3px #FF79DA);
-  -webkit-box-shadow: 2px 2px 10px 2px #9356DC;
-          box-shadow: 2px 2px 10px 2px #9356DC;
 }
 
 .head-section {
@@ -352,6 +448,10 @@ ul {
 }
 
 .cards__link--text .custom-checkbox .checked {
+  -webkit-animation: liking 200ms;
+          animation: liking 200ms;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
   background: -webkit-linear-gradient(#9356DC, #FF79DA);
   background-clip: text;
   -webkit-background-clip: text;
@@ -416,7 +516,7 @@ ul {
 }
 
 .main-menu h1 {
-  margin-top: -40px;
+  margin-top: -30px;
   margin-right: 120px;
 }
 
@@ -436,7 +536,7 @@ ul {
 .main-menu .custom-checkbox {
   position: absolute;
   left: 85%;
-  top: 40px;
+  top: 30px;
 }
 
 .main-menu .custom-checkbox .unchecked, .main-menu .custom-checkbox .checked {
@@ -455,41 +555,16 @@ ul {
 }
 
 .main-menu .custom-checkbox .checked {
+  -webkit-animation: liking 200ms;
+          animation: liking 200ms;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
   background: -webkit-linear-gradient(#9356DC, #FF79DA);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-filter: drop-shadow(0px 0px 8px #FF79DA);
           filter: drop-shadow(0px 0px 8px #FF79DA);
-}
-
-.main-menu .btn {
-  font-weight: 550;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(#FF79DA, #9356DC);
-  width: 180px;
-  height: 40px;
-  border-radius: 20px;
-  -webkit-box-shadow: 2px 2px 4px 0px gray;
-          box-shadow: 2px 2px 4px 0px gray;
-  border: none;
-  color: #fff;
-  outline: none;
-  cursor: pointer;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: all 300ms, delay 600ms;
-  transition: all 300ms, delay 600ms;
-}
-
-.main-menu .btn:active {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  background: radial-gradient(circle, #FF79DA 0%, #9356DC 100%);
-  -webkit-filter: drop-shadow(0px 0px 3px #FF79DA);
-          filter: drop-shadow(0px 0px 3px #FF79DA);
-  -webkit-box-shadow: 2px 2px 10px 2px #9356DC;
-          box-shadow: 2px 2px 10px 2px #9356DC;
 }
 
 .menu-choice {
