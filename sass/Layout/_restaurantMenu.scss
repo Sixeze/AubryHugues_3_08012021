@@ -1,8 +1,8 @@
 // page restaurant image-bg
-.bg-menu {
+.background {
     overflow: hidden;
     height: 250px;
-    .bg-image {
+    &__image {
         width: 100%;
         height: 250px;
     }
@@ -16,8 +16,9 @@
     background-color: $bg-color;
     border-radius: 40px 40px 0px 0px;
     h1 {
-       margin-top: -30px;
-       margin-right: 120px;
+        position: absolute;
+        left: 20px;
+        top: 10px;
     }
     @include hearts-chekbox();
     .custom-checkbox {
@@ -32,24 +33,47 @@
     width: 99%;
     @include column-flex();
     justify-content: flex-start;
-    h2 {
+    &__head {
         align-self: start;
-        padding-left: 10px;
-        text-transform: uppercase;
-    }
-    .green-line {
-        align-self: start;
-        margin-left: 10px;
-        margin-top: -20px;
-        height: 3px;
-        width: 60px;
-        background-color: $terciary-color;
+        position: relative;
+        h2 {
+            padding-left: 10px;
+            text-transform: uppercase;
+        }
+        .green-line {
+            position: absolute;
+            left: 10px;
+            bottom: 15px;
+            height: 3px;
+            background-color: $terciary-color;
+            animation: anim-line 900ms 1000ms ease-in both;
+        }
     }
 }
 
+@keyframes anim-line{
+    0% {
+        width: 0px;
+        opacity: 0.1;
+    }
+    50% {
+        width: 30px;
+        opacity: 0.5;
+    }
+    80% {
+        width:50px;
+        opacity: .9;
+    }
+    100% {
+        width: 60px;
+        opacity: 1;
+    }
+}
 
 .dish-container {
+    // border: 1px solid red;
     position: relative;
+    cursor: pointer;
     border-radius: 20px;
     margin-top: 20px;
     background-color: #fff;
@@ -62,12 +86,16 @@
         flex-flow: column nowrap;
         justify-content: flex-start;
         padding-top: 10px;
-        width: 100%;
+        width: 90%;
         height: 80px;
+        white-space: nowrap;
+        overflow-x: hidden;
         h3, p {
             margin: 0px;
             padding-left: 15px;
             padding-top: 4px;
+            overflow-x: hidden;
+            text-overflow: ellipsis;
         }
         h3 {
             font-size: 1.1rem;
@@ -77,63 +105,58 @@
         }
     }
     &__price {
-        position: absolute;
-        right: 0px;
-        display: flex;
-        flex-flow: row nowrap;
-        width: 30%;
+        padding-top: 40px;
+        font-weight: bold;
+        width: 50px;
+    }
+    &__check {
+        border-radius:0px 20px 20px 0px;
+        color: #fff;
+        width: 0px;
         height: 80px;
-        // border: 1px solid red;
-        p {
-            margin-top: 0px;
-            width: 50px;
-            height: 80px;
-            font-weight: 600;
-            font-size: 1rem;
-        //  border: 1px solid red;
-        }
-        &--click {
-            width: 100px;
-            background-color: $terciary-color;
-            border-radius: 0px 20px 20px 0px;
-            height: 80px;
-            text-align: center;
-            padding-top: 25px;
-        //  border: 1px solid red;
-        }
-    }
-}
-
-.fa-check-circle {
-    color: #fff;
-    background: $terciary-color;
-}
-
-.dish-container__txt {
-    cursor: pointer;
-    overflow: hidden;
-    &:hover + .dish-container__price {
-        transform: translateX(0px);
-        & > .dish-container__price--click {
-            width: 100px;
-            transform: scale(1);
-            & > .fa-check-circle {
-                transform: rotate(360deg);
-            }
-        }
-    }
-}
-
-.dish-container__price {
-    transform: translateX(50px);
-    transition: transform 500ms ease 500ms;
-    .dish-container__price--click {
-        transform-origin: right;
-        transform: scale(0, 1);
-        transition: transform 500ms cubic-bezier(.32,0,.07,1)  800ms;
+        opacity: 0;
+        transform: translate(0px);
+        transition: all 300ms cubic-bezier(.32,0,.07,1);
         .fa-check-circle {
-              transform: rotate(0deg);
-              transition: transform 500ms ease-out 800ms;
+            opacity: 0;
+            transition: all 500ms;
+        }
+    }
+    &:hover .dish-container__check {
+        opacity: 1;
+        transform: translateX(0px);
+        background-color: $terciary-color;
+        padding: 30px;
+        width: 90px;
+        .fa-check-circle {
+            animation: anim-circle 300ms ease-in both;
         }
     }
 }
+
+@keyframes anim-circle {
+    0% {
+        transform:  scale(1) rotate(0deg);
+        opacity: 0;
+    }
+    25% {
+        transform: scale(1.5) rotate(180deg);
+        opacity: 0.4;
+    }
+
+    50% {
+        transform: scale(1.8) rotate(360deg);
+        opacity: 0.7;
+    }
+
+    75% {
+        transform: scale(2) rotate(540deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(2.2) rotate(720deg);
+        opacity: 1;
+    }
+}
+
