@@ -41,7 +41,7 @@ ul {
     padding: 0px;
 }
 
-.app-work {
+.main-operation {
     @include row-flex();
     border-radius: 20px;
     background-color: $bg-color;
@@ -71,7 +71,7 @@ ul {
     }
     &:hover {
         background-color: rgba(146, 86, 220, 0.156);
-        .app-work__icons {
+        .main-operation__icons {
             color: $primary-color;
         }
     }

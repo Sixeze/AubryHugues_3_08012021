@@ -12,7 +12,7 @@
 }
 
 // Heart
-@mixin linear-gradient($percentage-color1, $percentage-color2){
+@mixin linear-gradient($percentage-color1, $percentage-color2) {
     background: $secondary-color;
     background: linear-gradient(to top, $secondary-color $percentage-color1, #fff $percentage-color2);
     background-size: auto;
