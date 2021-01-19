@@ -438,16 +438,15 @@ ul {
 }
 
 .after-load {
-  margin-right: 2px;
   z-index: 1;
   position: absolute;
-  overflow: hidden;
+  right: 0px;
   top: 0px;
-  -webkit-animation: tadam 3000ms 3000ms both;
-          animation: tadam 3000ms 3000ms both;
+  -webkit-animation: fade-in 3000ms 3000ms both;
+          animation: fade-in 3000ms 3000ms both;
 }
 
-@-webkit-keyframes tadam {
+@-webkit-keyframes fade-in {
   0% {
     opacity: 0;
   }
@@ -456,7 +455,7 @@ ul {
   }
 }
 
-@keyframes tadam {
+@keyframes fade-in {
   0% {
     opacity: 0;
   }
@@ -466,16 +465,15 @@ ul {
 }
 
 .Load-container {
-  display: inline-block;
+  position: relative;
   margin-top: 300px;
   margin-left: 35%;
   z-index: -1;
-  position: relative;
-  -webkit-animation: tadam2 2000ms 3000ms both;
-          animation: tadam2 2000ms 3000ms both;
+  -webkit-animation: fade-out 2000ms 3000ms both;
+          animation: fade-out 2000ms 3000ms both;
 }
 
-@-webkit-keyframes tadam2 {
+@-webkit-keyframes fade-out {
   0% {
     opacity: 1;
   }
@@ -484,7 +482,7 @@ ul {
   }
 }
 
-@keyframes tadam2 {
+@keyframes fade-out {
   0% {
     opacity: 1;
   }
