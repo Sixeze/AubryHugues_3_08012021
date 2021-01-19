@@ -4,8 +4,7 @@
     height: 110px;
     border-radius: 50%;
     background: conic-gradient(#99E2D0, #FF79DA, #9356DC);
-    rotate: 90deg;
-    animation: animate 1200ms linear reverse infinite;
+    animation: animate 1200ms 300ms linear reverse 2;
 }
 .border:after {
     content: '';
@@ -27,8 +26,7 @@
     height: 100px;
     border-radius: 50%;
     background: conic-gradient(#9356DC, #99E2D0, #FF79DA);
-    rotate: 0deg;
-    animation: animate 1500ms linear infinite;
+    animation: animate 1500ms 300ms linear 2;
 }
 .loader:after {
     content: '';
@@ -59,3 +57,41 @@
         opacity:.9;
     }
 }
+
+
+
+.after-load {
+    margin-right: 2px;
+    z-index: 1;
+    position: absolute;
+    overflow: hidden;
+    top: 0px;
+    animation: tadam 3000ms 3000ms both;
+}
+@keyframes tadam{
+0% {
+    opacity: 0;
+}
+100% {
+    opacity: 1;
+    }
+}
+
+.Load-container {
+    display: inline-block;
+    margin-top: 300px;
+    margin-left: 35%;
+    z-index: -1;
+    position: relative;
+    animation: tadam2 2000ms 3000ms both;
+}
+
+@keyframes tadam2{
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        }
+    }
+
