@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @-webkit-keyframes liking {
-  from {
+  0% {
     background: #FF79DA;
     background: -webkit-gradient(linear, left bottom, left top, from(#FF79DA), color-stop(0%, #fff));
     background: linear-gradient(to top, #FF79DA 0%, #fff 0%);
@@ -38,10 +38,10 @@
     -webkit-background-clip: text;
     color: transparent;
   }
-  80% {
+  70% {
     background: #FF79DA;
-    background: -webkit-gradient(linear, left bottom, left top, color-stop(80%, #FF79DA), color-stop(80%, #fff));
-    background: linear-gradient(to top, #FF79DA 80%, #fff 80%);
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(70%, #FF79DA), color-stop(70%, #fff));
+    background: linear-gradient(to top, #FF79DA 70%, #fff 70%);
     background-size: auto;
     background-clip: text;
     -webkit-background-clip: text;
@@ -49,7 +49,7 @@
   }
 }
 @keyframes liking {
-  from {
+  0% {
     background: #FF79DA;
     background: -webkit-gradient(linear, left bottom, left top, from(#FF79DA), color-stop(0%, #fff));
     background: linear-gradient(to top, #FF79DA 0%, #fff 0%);
@@ -85,10 +85,10 @@
     -webkit-background-clip: text;
     color: transparent;
   }
-  80% {
+  70% {
     background: #FF79DA;
-    background: -webkit-gradient(linear, left bottom, left top, color-stop(80%, #FF79DA), color-stop(80%, #fff));
-    background: linear-gradient(to top, #FF79DA 80%, #fff 80%);
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(70%, #FF79DA), color-stop(70%, #fff));
+    background: linear-gradient(to top, #FF79DA 70%, #fff 70%);
     background-size: auto;
     background-clip: text;
     -webkit-background-clip: text;
@@ -350,8 +350,7 @@ ul {
   height: 110px;
   border-radius: 50%;
   background: conic-gradient(#99E2D0, #FF79DA, #9356DC);
-  rotate: 90deg;
-  animation: animate 1200ms linear reverse infinite;
+  animation: animate 1200ms 300ms linear reverse 2;
 }
 
 .border:after {
@@ -374,9 +373,8 @@ ul {
   height: 100px;
   border-radius: 50%;
   background: conic-gradient(#9356DC, #99E2D0, #FF79DA);
-  rotate: 0deg;
-  -webkit-animation: animate 1500ms linear infinite;
-          animation: animate 1500ms linear infinite;
+  -webkit-animation: animate 1500ms 300ms linear 2;
+          animation: animate 1500ms 300ms linear 2;
 }
 
 .loader:after {
@@ -439,6 +437,62 @@ ul {
   }
 }
 
+.after-load {
+  margin-right: 2px;
+  z-index: 1;
+  position: absolute;
+  overflow: hidden;
+  top: 0px;
+  -webkit-animation: tadam 3000ms 3000ms both;
+          animation: tadam 3000ms 3000ms both;
+}
+
+@-webkit-keyframes tadam {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes tadam {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.Load-container {
+  display: inline-block;
+  margin-top: 300px;
+  margin-left: 35%;
+  z-index: -1;
+  position: relative;
+  -webkit-animation: tadam2 2000ms 3000ms both;
+          animation: tadam2 2000ms 3000ms both;
+}
+
+@-webkit-keyframes tadam2 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes tadam2 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .mid-section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -492,9 +546,6 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  -webkit-box-pack: baseline;
-      -ms-flex-pack: baseline;
-          justify-content: baseline;
   margin-top: 0px;
   width: 100%;
   height: 70px;
@@ -755,7 +806,7 @@ ul {
   position: relative;
   cursor: pointer;
   border-radius: 20px;
-  margin-top: 20px;
+  margin: 10px 10px;
   background-color: #fff;
   -webkit-box-shadow: 5px 5px 5px gray;
           box-shadow: 5px 5px 5px gray;
@@ -892,6 +943,77 @@ ul {
     -webkit-transform: scale(2.2) rotate(360deg);
             transform: scale(2.2) rotate(360deg);
     opacity: 1;
+  }
+}
+
+.appear-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dish-container:nth-child(1) {
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-animation: fadein 1000ms  1000ms ease-in-out both;
+          animation: fadein 1000ms  1000ms ease-in-out both;
+}
+
+.dish-container:nth-child(2) {
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-animation: fadein 1000ms  1200ms ease-in-out both;
+          animation: fadein 1000ms  1200ms ease-in-out both;
+}
+
+.dish-container:nth-child(3) {
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-animation: fadein 1000ms  1400ms ease-in-out both;
+          animation: fadein 1000ms  1400ms ease-in-out both;
+}
+
+.dish-container:nth-child(4) {
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-animation: fadein 1000ms  1600ms ease-in-out both;
+          animation: fadein 1000ms  1600ms ease-in-out both;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
   }
 }
 /*# sourceMappingURL=style.css.map */
