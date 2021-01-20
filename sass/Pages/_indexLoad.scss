@@ -1,3 +1,23 @@
+.Load-container {
+    width: 110px;
+    margin: auto;
+    margin-top: 300px;
+    z-index: -1;
+    animation: fade-out 2000ms 2200ms both;
+}
+
+@keyframes fade-out{
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        }
+    }
+
+
+
+
 .border {
     position: relative;
     width: 110px;
@@ -60,34 +80,29 @@
 
 .after-load {
     z-index: 1;
-    position: absolute;
-    right: 0px;
-    top: 0px;
+    margin: auto;
+    margin-top: -430px;
+    width: auto;
     animation: fade-in 3000ms 3000ms both;
 }
 @keyframes fade-in{
 0% {
     opacity: 0;
 }
+90% {
+    opacity: 1;
+    }
+
 100% {
     opacity: 1;
     }
 }
 
-.Load-container {
-    position: relative;
-    margin-top: 300px;
-    margin-left: 35%;
-    z-index: -1;
-    animation: fade-out 2000ms 3000ms both;
+@media (orientation: landscape) {
+    .Load-container {
+        margin-top: 250px;
+    }
+    .after-load {
+        margin-top: -350px;
+    }
 }
-
-@keyframes fade-out{
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        }
-    }
-

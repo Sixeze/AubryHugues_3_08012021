@@ -1,11 +1,13 @@
 footer {
+    @include column-flex();
+    align-items: flex-start;
     background-color: rgb(66, 65, 65);
+    width: auto;
     margin-top: -80px;
     height: 200px;
     .logo {
-        margin: 10px;
+        margin: 20px;
         margin-bottom: -10px;
-        width: 30%;
     }
 
     .color-logo {
@@ -14,7 +16,7 @@ footer {
 
     ul {
         height: 150px;
-        padding-left: 10px;
+        margin: 20px;
         li {
             margin-bottom: 15px;
             a {
@@ -26,5 +28,20 @@ footer {
                 }
             }
         }
+    }
+}
+
+@media all and (min-width: 520px) {
+    footer {
+        margin-top: $margin-section;
+        @include column-flex();
+        padding-right: 30%;
+    }
+}
+
+@media all and (min-width: 1440px) {
+    footer {
+        @include column-flex();
+        padding-right: 0%;
     }
 }

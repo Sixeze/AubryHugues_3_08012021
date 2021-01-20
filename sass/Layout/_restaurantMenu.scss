@@ -193,3 +193,10 @@
         transform: scaleY(1)
     }
 }
+
+@media all and (min-width: 1440px) {
+    .background, .main-menu {
+        width: 60%;
+    }
+
+}

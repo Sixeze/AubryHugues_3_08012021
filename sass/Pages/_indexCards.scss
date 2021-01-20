@@ -33,7 +33,7 @@
         h3, p {
             display: inline-block;
             height: 30px;
-            width: 350px;
+            width: 250px;
             margin-left: 10px;
             margin-bottom: 0px;
         }
@@ -73,3 +73,37 @@
         padding-top: 3px;
     }
 }
+
+@media all and (min-width: 520px) {
+    .mid-section {
+        width: 60%;
+        margin: auto;
+    }
+}
+
+@media all and (min-width: 790px) {
+    .mid-section {
+        width: 60%;
+        margin: auto;
+
+        .cards {
+            width: 400px;
+        }
+    }
+}
+
+@media all and (min-width: 1440px) {
+    .mid-section {
+        display: flex;
+        flex-flow: row wrap;
+        width: 80%;
+        h2 {
+            width: 100%;
+        }
+    }
+
+    .cards {
+        width: 400px;
+    }
+}
+
