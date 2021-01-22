@@ -473,7 +473,8 @@ ul {
   width: 110px;
   height: 110px;
   border-radius: 50%;
-  background: conic-gradient(#99E2D0, #FF79DA, #9356DC);
+  background: -webkit-gradient(linear, left top, left bottom, from(#99E2D0), color-stop(#FF79DA), to(#9356DC));
+  background: linear-gradient(#99E2D0, #FF79DA, #9356DC);
   animation: animate 1200ms 300ms linear reverse 2;
 }
 
@@ -496,7 +497,8 @@ ul {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background: conic-gradient(#9356DC, #99E2D0, #FF79DA);
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), color-stop(#99E2D0), to(#FF79DA));
+  background: linear-gradient(#9356DC, #99E2D0, #FF79DA);
   -webkit-animation: animate 1500ms 300ms linear 2;
           animation: animate 1500ms 300ms linear 2;
 }
@@ -1038,18 +1040,18 @@ ul {
 
 @-webkit-keyframes anim-circle {
   0% {
-    -webkit-transform: scale(1) rotate(0deg);
-            transform: scale(1) rotate(0deg);
+    -webkit-transform: scale(2) rotate(0deg);
+            transform: scale(2) rotate(0deg);
     opacity: 0;
   }
   25% {
-    -webkit-transform: scale(1.5) rotate(90deg);
-            transform: scale(1.5) rotate(90deg);
+    -webkit-transform: scale(2) rotate(90deg);
+            transform: scale(2) rotate(90deg);
     opacity: 0.4;
   }
   50% {
-    -webkit-transform: scale(1.8) rotate(180deg);
-            transform: scale(1.8) rotate(180deg);
+    -webkit-transform: scale(2) rotate(180deg);
+            transform: scale(2) rotate(180deg);
     opacity: 0.7;
   }
   75% {
@@ -1058,26 +1060,26 @@ ul {
     opacity: 1;
   }
   100% {
-    -webkit-transform: scale(2.2) rotate(360deg);
-            transform: scale(2.2) rotate(360deg);
+    -webkit-transform: scale(2) rotate(360deg);
+            transform: scale(2) rotate(360deg);
     opacity: 1;
   }
 }
 
 @keyframes anim-circle {
   0% {
-    -webkit-transform: scale(1) rotate(0deg);
-            transform: scale(1) rotate(0deg);
+    -webkit-transform: scale(2) rotate(0deg);
+            transform: scale(2) rotate(0deg);
     opacity: 0;
   }
   25% {
-    -webkit-transform: scale(1.5) rotate(90deg);
-            transform: scale(1.5) rotate(90deg);
+    -webkit-transform: scale(2) rotate(90deg);
+            transform: scale(2) rotate(90deg);
     opacity: 0.4;
   }
   50% {
-    -webkit-transform: scale(1.8) rotate(180deg);
-            transform: scale(1.8) rotate(180deg);
+    -webkit-transform: scale(2) rotate(180deg);
+            transform: scale(2) rotate(180deg);
     opacity: 0.7;
   }
   75% {
@@ -1086,8 +1088,8 @@ ul {
     opacity: 1;
   }
   100% {
-    -webkit-transform: scale(2.2) rotate(360deg);
-            transform: scale(2.2) rotate(360deg);
+    -webkit-transform: scale(2) rotate(360deg);
+            transform: scale(2) rotate(360deg);
     opacity: 1;
   }
 }
@@ -1112,60 +1114,115 @@ ul {
 .dish-container:nth-child(1) {
   -webkit-transform-origin: top;
           transform-origin: top;
-  -webkit-animation: fadein 1000ms  1000ms ease-in-out both;
-          animation: fadein 1000ms  1000ms ease-in-out both;
+  -webkit-animation: fadein-menu 800ms  1000ms ease both;
+          animation: fadein-menu 800ms  1000ms ease both;
 }
 
 .dish-container:nth-child(2) {
   -webkit-transform-origin: top;
           transform-origin: top;
-  -webkit-animation: fadein 1000ms  1200ms ease-in-out both;
-          animation: fadein 1000ms  1200ms ease-in-out both;
+  -webkit-animation: fadein-menu 800ms  1200ms ease both;
+          animation: fadein-menu 800ms  1200ms ease both;
 }
 
 .dish-container:nth-child(3) {
   -webkit-transform-origin: top;
           transform-origin: top;
-  -webkit-animation: fadein 1000ms  1400ms ease-in-out both;
-          animation: fadein 1000ms  1400ms ease-in-out both;
+  -webkit-animation: fadein-menu 800ms  1400ms ease both;
+          animation: fadein-menu 800ms  1400ms ease both;
 }
 
 .dish-container:nth-child(4) {
   -webkit-transform-origin: top;
           transform-origin: top;
-  -webkit-animation: fadein 1000ms  1600ms ease-in-out both;
-          animation: fadein 1000ms  1600ms ease-in-out both;
+  -webkit-animation: fadein-menu 800ms  1600ms ease both;
+          animation: fadein-menu 800ms  1600ms ease both;
 }
 
-@-webkit-keyframes fadein {
+@-webkit-keyframes fadein-menu {
   from {
     opacity: 0;
-    -webkit-transform: scaleY(0);
-            transform: scaleY(0);
   }
   to {
     opacity: 1;
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
   }
 }
 
-@keyframes fadein {
+@keyframes fadein-menu {
   from {
     opacity: 0;
-    -webkit-transform: scaleY(0);
-            transform: scaleY(0);
   }
   to {
     opacity: 1;
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
   }
 }
 
 @media all and (min-width: 1440px) {
   .background, .main-menu {
     width: 60%;
+  }
+}
+
+.container2 {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  background: #fff;
+}
+
+.custom-checkbox2__check {
+  width: 40px;
+  margin: 4px;
+  fill: transparent;
+  stroke: #FF79DA;
+  stroke-width: 10;
+  cursor: pointer;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 2000ms ease-in-out;
+  transition: all 2000ms ease-in-out;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.custom-checkbox2:active, .custom-checkbox2__input:checked + .custom-checkbox2__check {
+  fill: #9356DC;
+  stroke: none;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-animation: animate-heart;
+          animation: animate-heart;
+}
+
+@-webkit-keyframes animate-heart {
+  0% {
+    opacity: 0.1;
+  }
+  35% {
+    opacity: 0.3;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animate-heart {
+  0% {
+    opacity: 0.1;
+  }
+  35% {
+    opacity: 0.3;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
   }
 }
 /*# sourceMappingURL=style.css.map */
