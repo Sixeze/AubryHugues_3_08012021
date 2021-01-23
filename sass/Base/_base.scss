@@ -24,8 +24,8 @@ li {
     list-style-type: none;
 }
 
-a {
-    outline: none;
+a, a:hover, a:active, a:focus, *:focus {
+    outline: 0;
     text-decoration: none;
     color: black;
 }
