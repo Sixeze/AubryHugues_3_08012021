@@ -43,14 +43,11 @@
         p {
             margin-top: 0px;
         }
-        @include hearts-chekbox();
         .custom-checkbox {
-            width: 35px;
-            height: 35px;
             margin-left: 88%;
             margin-top: -55px;
-
-        @include hearts-function();
+            width: 35px;
+            height: 32px;
         }
     }
 }

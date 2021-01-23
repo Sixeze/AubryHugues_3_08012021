@@ -25,11 +25,20 @@
             <section class="main-menu">
                 <div>
                     <h1>Le délice des sens</h1>
-                    <label class="custom-checkbox">
-                        <input type="checkbox" />
-                        <i class="fas fa-heart unchecked"></i>
-                        <i class="fas fa-heart checked"></i>
-                    </label>
+                    <div class="Heart-container">
+                        <label class="custom-checkbox">
+                            <input class="custom-checkbox__input" type="checkbox" />
+                            <svg class="custom-checkbox__check">
+                                <defs>
+                                    <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
+                                        <stop class="stop1" offset="0%"/>
+                                        <stop class="stop2" offset="100%"/>
+                                    </linearGradient>
+                                </defs>
+                                <use xlink:href="./images/icons/like.svg#Heart" />
+                            </svg>
+                        </label>
+                    </div>
                 </div>
                 <article class="menu-choice">
                     <div class="menu-choice__head">

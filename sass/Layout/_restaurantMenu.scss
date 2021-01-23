@@ -19,12 +19,10 @@
         left: 20px;
         top: 10px;
     }
-    @include hearts-chekbox();
-    .custom-checkbox {
+    .Heart-container {
         position: absolute;
         left: 85%;
         top: 30px;
-        @include hearts-function();
     }
 }
 

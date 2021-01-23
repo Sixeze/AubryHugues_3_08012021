@@ -1,0 +1,41 @@
+.custom-checkbox__check {
+    width: 30px;
+    height: 30px;
+    fill: transparent;
+    stroke: #000;
+    stroke-width: 30;
+    cursor: pointer;
+    transform-origin: bottom;
+}
+
+
+.custom-checkbox:active + .custom-checkbox__check, .custom-checkbox__input:checked + .custom-checkbox__check {
+    outline: 0;
+    fill: url(#grad1);
+    stroke: none;
+    animation: animate-heart 200ms ease-in;
+}
+
+.stop1 {
+    stop-color: $primary-color;
+  }
+
+.stop2 {
+    stop-color: $secondary-color;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+@keyframes animate-heart {
+    0% {
+       opacity: 0;
+       transform: scaleY(0)
+    }
+    100%{
+        opacity: 1;
+        transform: scaleY(1);
+     }
+
+}
