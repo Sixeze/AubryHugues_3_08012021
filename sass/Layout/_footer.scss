@@ -1,31 +1,33 @@
+.footerMenu {
+    margin-top: -80px;
+}
+
 footer {
     @include column-flex();
     align-items: flex-start;
     background-color: rgb(66, 65, 65);
-    width: auto;
-    margin-top: -80px;
     height: 200px;
     .logo {
         margin: 20px;
         margin-bottom: -10px;
+        width: 100px;
     }
-
     .color-logo {
         fill: white;
     }
-
     ul {
         height: 150px;
-        margin: 20px;
+        margin-left: 20px;
         li {
-            margin-bottom: 15px;
-            a {
+            margin-bottom: 10px;
+            a, i {
+                width: 20px;
                 color: #fff;
-                i {
-                    width: 20px;
-                    text-align: center;
-                    margin-right: 10px;
-                }
+            }
+            i {
+                text-align: start;
+                font-size: 0.8rem;
+                margin-right: 5px;
             }
         }
     }

@@ -54,12 +54,13 @@ a, a:hover, a:active, a:focus, *:focus {
 }
 
 .btn {
-  font-weight: 600;
+  font-weight: 500;
+  font-size: 16px;
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(#FF79DA, #9356DC);
-  width: 180px;
-  height: 40px;
-  border-radius: 20px;
+  width: 220px;
+  height: 50px;
+  border-radius: 50px;
   -webkit-box-shadow: 2px 2px 4px 0px gray;
           box-shadow: 2px 2px 4px 0px gray;
   border: none;
@@ -84,6 +85,7 @@ a, a:hover, a:active, a:focus, *:focus {
 }
 
 header {
+  height: 65px;
   margin-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -104,9 +106,10 @@ header .back-index {
 }
 
 header .logo {
-  width: 200px;
-  height: 40px;
-  position: relative;
+  width: 160px;
+  height: 45px;
+  position: absolute;
+  top: 20px;
 }
 
 header .logo img {
@@ -127,8 +130,8 @@ header .logo img {
 }
 
 .custom-checkbox__check {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   fill: transparent;
   stroke: #000;
   stroke-width: 30;
@@ -183,6 +186,10 @@ input[type="checkbox"] {
   }
 }
 
+.footerMenu {
+  margin-top: -80px;
+}
+
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -191,9 +198,9 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -201,14 +208,13 @@ footer {
       -ms-flex-align: start;
           align-items: flex-start;
   background-color: #424141;
-  width: auto;
-  margin-top: -80px;
   height: 200px;
 }
 
 footer .logo {
   margin: 20px;
   margin-bottom: -10px;
+  width: 100px;
 }
 
 footer .color-logo {
@@ -217,21 +223,22 @@ footer .color-logo {
 
 footer ul {
   height: 150px;
-  margin: 20px;
+  margin-left: 20px;
 }
 
 footer ul li {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
-footer ul li a {
+footer ul li a, footer ul li i {
+  width: 20px;
   color: #fff;
 }
 
-footer ul li a i {
-  width: 20px;
-  text-align: center;
-  margin-right: 10px;
+footer ul li i {
+  text-align: start;
+  font-size: 0.8rem;
+  margin-right: 5px;
 }
 
 @media all and (min-width: 520px) {
@@ -244,9 +251,9 @@ footer ul li a i {
     -webkit-box-direction: normal;
         -ms-flex-flow: column nowrap;
             flex-flow: column nowrap;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -263,9 +270,9 @@ footer ul li a i {
     -webkit-box-direction: normal;
         -ms-flex-flow: column nowrap;
             flex-flow: column nowrap;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -274,9 +281,10 @@ footer ul li a i {
 }
 
 .navigation .position {
-  background: #a8a7a7;
-  border-top: 2px solid darkgray;
-  height: 40px;
+  background: #cccbcb;
+  border-top: 3px solid darkgray;
+  height: 45px;
+  padding-right: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -292,11 +300,11 @@ footer ul li a i {
 }
 
 .navigation .position i {
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .navigation .description {
-  height: 300px;
+  height: 280px;
   background: #f2f2f2;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -305,21 +313,22 @@ footer ul li a i {
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 .navigation .description h1 {
-  width: 65%;
+  width: 70%;
   text-align: center;
 }
 
 .navigation .description p {
-  width: 70%;
+  font-size: 1.1rem;
+  width: 98%;
   text-align: center;
 }
 
@@ -331,13 +340,13 @@ footer ul li a i {
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 300px;
+  height: 400px;
   margin-top: 50px;
 }
 
@@ -346,11 +355,31 @@ footer ul li a i {
   -ms-flex-item-align: start;
       -ms-grid-row-align: start;
       align-self: start;
-  margin-left: 30px;
+  margin-left: 15px;
+  margin-top: 5px;
+  margin-bottom: -10px;
 }
 
-ul {
-  padding: 0px;
+.head-section ul {
+  width: 99%;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-bottom: 30px;
 }
 
 .main-operation {
@@ -367,32 +396,40 @@ ul {
   background-color: #f2f2f2;
   -webkit-box-shadow: 3px 3px 5px 2px lightgray;
           box-shadow: 3px 3px 5px 2px lightgray;
-  width: 100%;
-  height: 60px;
-  margin-bottom: 20px;
+  width: 88%;
+  height: 70px;
+  position: relative;
 }
 
 .main-operation__number {
+  position: absolute;
   color: #fff;
   background-color: #9356DC;
-  width: 20px;
-  height: 20px;
-  border-radius: 40px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50px;
   display: block;
-  margin-left: -10px;
+  left: -10px;
   text-align: center;
+  padding-top: 2px;
 }
 
 .main-operation__icons {
   color: #423f3f;
   margin-left: 30px;
-  width: 20px;
+  width: 25px;
+  height: 25px;
   text-align: center;
 }
 
+.main-operation .fa-mobile-alt {
+  font-size: 18px;
+}
+
 .main-operation__txt {
-  margin-left: 40px;
+  margin-left: 20px;
   width: 200px;
+  height: 25px;
 }
 
 .main-operation:hover {
@@ -575,41 +612,40 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   background-color: #f2f2f2;
-  margin-top: 50px;
-  margin-bottom: 180px;
+  height: 1225px;
 }
 
 .mid-section h2 {
   -ms-flex-item-align: start;
       -ms-grid-row-align: start;
       align-self: start;
-  margin-left: 30px;
+  margin-left: 20px;
+  margin-top: 50px;
 }
 
 .cards {
   width: 90%;
   height: 250px;
-  padding: 0px;
-  border-radius: 30px;
-  margin-bottom: 30px;
+  border-radius: 15px;
   background-color: #fff;
-  -webkit-box-shadow: 8px 5px 5px 2px lightgray;
-          box-shadow: 8px 5px 5px 2px lightgray;
+  -webkit-box-shadow: 0px 5px 10px 2px lightgray;
+          box-shadow: 0px 5px 10px 2px lightgray;
+  margin-bottom: 20px;
 }
 
 .cards__pictures {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
-  height: 180px;
-  border-radius: 30px 30px 0px 0px;
+  height: 175px;
+  border-radius: 15px 15px 0px 0px;
 }
 
 .cards__text {
@@ -620,32 +656,32 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  margin-top: 0px;
   width: 100%;
   height: 70px;
+  position: relative;
 }
 
 .cards__text h3, .cards__text p {
   display: inline-block;
-  height: 30px;
+  height: 25px;
   width: 250px;
   margin-left: 10px;
   margin-bottom: 0px;
 }
 
 .cards__text h3 {
-  margin-top: 5px;
+  margin-top: 15px;
 }
 
 .cards__text p {
+  font-size: 1.1rem;
   margin-top: 0px;
 }
 
 .cards__text .custom-checkbox {
-  margin-left: 88%;
-  margin-top: -55px;
-  width: 35px;
-  height: 32px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
 }
 
 .new-restaurant {
@@ -661,15 +697,15 @@ ul {
 
 .new-restaurant span {
   background-color: #99E2D0;
-  color: green;
+  color: #00803c;
   position: absolute;
-  right: 5%;
-  top: 20%;
-  font-size: 1.1rem;
+  right: 3%;
+  top: 10%;
+  font-size: 0.9rem;
   text-align: center;
   width: 80px;
   height: 30px;
-  padding-top: 3px;
+  padding-top: 5px;
 }
 
 @media all and (min-width: 520px) {
@@ -726,9 +762,9 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -759,15 +795,13 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-content: flex-start;
 }
 
 .menu-choice__head {
@@ -983,9 +1017,9 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
