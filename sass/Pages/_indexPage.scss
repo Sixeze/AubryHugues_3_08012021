@@ -48,9 +48,6 @@
     }
 }
 
-
-
-
 .main-operation {
     @include row-flex();
     border-radius: 20px;
@@ -93,3 +90,18 @@
         }
     }
 }
+
+@media all and (min-width: 520px) {
+    .main-operation {
+        width: 400px;
+    }
+}
+
+@media all and (min-width: 2400px) {
+    .navigation, .head-section {
+        width: 90%;
+        margin: auto;
+    }
+}
+
+

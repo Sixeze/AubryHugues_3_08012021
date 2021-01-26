@@ -1,5 +1,5 @@
-.footerMenu {
-    margin-top: -80px;
+.footer-menu {
+    margin-top: -85px;
 }
 
 footer {
@@ -36,14 +36,12 @@ footer {
 @media all and (min-width: 520px) {
     footer {
         margin-top: $margin-section;
-        @include column-flex();
-        padding-right: 30%;
+        padding-left: 13%;
     }
 }
 
-@media all and (min-width: 1440px) {
+@media all and (min-width: 1670px) {
     footer {
-        @include column-flex();
-        padding-right: 0%;
+        padding-left: 25%;
     }
 }

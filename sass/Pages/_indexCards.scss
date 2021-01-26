@@ -75,14 +75,15 @@
 
 @media all and (min-width: 520px) {
     .mid-section {
-        width: 60%;
+        width: 100%;
         margin: auto;
     }
 }
 
-@media all and (min-width: 790px) {
+@media all and (min-width: 760px) {
     .mid-section {
-        width: 60%;
+        justify-content: center;
+        width: 100%;
         margin: auto;
 
         .cards {
@@ -95,7 +96,9 @@
     .mid-section {
         display: flex;
         flex-flow: row wrap;
-        width: 80%;
+        justify-content: space-around;
+        height: 750px;
+        width: 100%;
         h2 {
             width: 100%;
         }
@@ -103,6 +106,11 @@
 
     .cards {
         width: 400px;
+    }
+}
+@media all and (min-width: 2400px) {
+    .mid-section {
+        width: 90%;
     }
 }
 
