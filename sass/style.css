@@ -123,6 +123,12 @@ header .logo img {
   }
 }
 
+@media all and (min-width: 520px) {
+  header {
+    margin-top: auto;
+  }
+}
+
 @media all and (min-width: 1440px) {
   header {
     width: 70%;
@@ -246,9 +252,18 @@ footer ul li i {
   }
 }
 
+@media all and (min-width: 1440px) {
+  .footer-menu {
+    padding-left: 25%;
+  }
+}
+
 @media all and (min-width: 1670px) {
   footer {
     padding-left: 25%;
+  }
+  .footer-menu {
+    padding-left: 32%;
   }
 }
 
@@ -302,6 +317,10 @@ footer ul li i {
   font-size: 1.1rem;
   width: 98%;
   text-align: center;
+}
+
+.navigation .description .index-btn {
+  margin-top: 10px;
 }
 
 .head-section {
@@ -369,6 +388,7 @@ footer ul li i {
   -webkit-box-shadow: 3px 3px 5px 2px lightgray;
           box-shadow: 3px 3px 5px 2px lightgray;
   width: 88%;
+  max-width: 380px;
   height: 70px;
   position: relative;
 }
@@ -387,6 +407,7 @@ footer ul li i {
 }
 
 .main-operation__icons {
+  padding-top: 6px;
   color: #423f3f;
   margin-left: 30px;
   width: 25px;
@@ -396,10 +417,12 @@ footer ul li i {
 
 .main-operation .fa-mobile-alt {
   font-size: 18px;
+  padding-top: 2px;
 }
 
 .main-operation__txt {
   margin-left: 20px;
+  padding-top: 5px;
   width: 200px;
   height: 25px;
 }
@@ -412,9 +435,9 @@ footer ul li i {
   color: #9356DC;
 }
 
-@media all and (min-width: 520px) {
-  .main-operation {
-    width: 400px;
+@media all and (min-width: 1000px) {
+  .navigation .description {
+    height: 220px;
   }
 }
 
@@ -787,7 +810,7 @@ footer ul li i {
 
 .main-menu .Heart-container {
   position: absolute;
-  right: 10%;
+  right: 4vw;
   top: 35px;
 }
 
@@ -1056,9 +1079,16 @@ footer ul li i {
   }
 }
 
+@media all and (min-width: 375px) {
+  .main-menu .Heart-container {
+    right: 10%;
+  }
+}
+
 @media all and (min-width: 520px) {
-  .background, .main-menu {
-    margin: auto;
+  .main-menu h1 {
+    width: 350px;
+    margin-left: 20%;
   }
   .menu-choice {
     width: 70%;
@@ -1071,6 +1101,7 @@ footer ul li i {
 @media all and (min-width: 1440px) {
   .background, .main-menu {
     width: 70%;
+    margin: auto;
   }
   .menu-choice {
     width: 55%;
