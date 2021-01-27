@@ -40,8 +40,17 @@ footer {
     }
 }
 
+@media all and (min-width: 1440px) {
+    .footer-menu {
+        padding-left: 25%;
+    }
+}
+
 @media all and (min-width: 1670px) {
     footer {
         padding-left: 25%;
+    }
+    .footer-menu {
+        padding-left: 32%;
     }
 }

@@ -25,6 +25,13 @@ header {
         margin: auto;
     }
 }
+
+@media all and (min-width: 520px) {
+    header {
+        margin-top: auto;
+    }
+}
+
 @media all and (min-width: 1440px) {
     header {
         width: 70%;
