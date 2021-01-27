@@ -5,27 +5,17 @@
     stroke: #000;
     stroke-width: 30;
     cursor: pointer;
+    transform: scale(.9);
     transform-origin: bottom;
+    transition: all 1000ms;
 }
-
-
-
-    // animation: heart-fadeout 200ms 200ms before;
-// @keyframes heart-fadeout {
-//     from {
-//         opacity: 1;
-//     }
-//     to {
-//         opacity: 0;
-//     }
-// }
-
 
 .custom-checkbox:active + .custom-checkbox__check, .custom-checkbox__input:checked + .custom-checkbox__check {
     outline: 0;
     fill: url(#grad1);
     stroke: none;
-    animation: animate-heart 600ms ease-in;
+    transform: scale(1);
+    animation: animate-heart 300ms ease-in;
 }
 
 .stop1 {
@@ -43,11 +33,8 @@ input[type="checkbox"] {
 @keyframes animate-heart {
     0% {
        opacity: 0;
-      
     }
     100%{
         opacity: 1;
-        
-     }
-
+    }
 }

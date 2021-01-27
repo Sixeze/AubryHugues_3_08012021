@@ -48,7 +48,7 @@
             bottom: 1px;
             height: 3px;
             background-color: $terciary-color;
-            animation: anim-line 900ms 1000ms ease-in both;
+            animation: anim-line 500ms 1500ms ease-in both;
         }
     }
 }
@@ -56,15 +56,15 @@
 @keyframes anim-line{
     0% {
         width: 0px;
-        opacity: 0.1;
+        opacity: .1;
     }
     35% {
-        width: 15px;
-        opacity: 0.5;
+        width: 25px;
+        opacity: .6;
     }
     70% {
-        width:30px;
-        opacity: .9;
+        width: 40px;
+        opacity: .8;
     }
     100% {
         width: 45px;
@@ -121,10 +121,10 @@
         .fa-check-circle {
             margin-top: 25px;
             opacity: 0;
-            transition: all 500ms;
+            transition: all 300ms;
         }
     }
-    &:hover .dish-container__check {
+    &:hover .dish-container__check, &:active .dish-container__check {
         opacity: 1;
         transform: translateX(0px);
         background-color: $terciary-color;

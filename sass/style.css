@@ -136,16 +136,22 @@ header .logo img {
   stroke: #000;
   stroke-width: 30;
   cursor: pointer;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
   -webkit-transform-origin: bottom;
           transform-origin: bottom;
+  -webkit-transition: all 1000ms;
+  transition: all 1000ms;
 }
 
 .custom-checkbox:active + .custom-checkbox__check, .custom-checkbox__input:checked + .custom-checkbox__check {
   outline: 0;
   fill: url(#grad1);
   stroke: none;
-  -webkit-animation: animate-heart 600ms ease-in;
-          animation: animate-heart 600ms ease-in;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-animation: animate-heart 300ms ease-in;
+          animation: animate-heart 300ms ease-in;
 }
 
 .stop1 {
@@ -823,22 +829,22 @@ footer ul li i {
   bottom: 1px;
   height: 3px;
   background-color: #99E2D0;
-  -webkit-animation: anim-line 900ms 1000ms ease-in both;
-          animation: anim-line 900ms 1000ms ease-in both;
+  -webkit-animation: anim-line 500ms 1500ms ease-in both;
+          animation: anim-line 500ms 1500ms ease-in both;
 }
 
 @-webkit-keyframes anim-line {
   0% {
     width: 0px;
-    opacity: 0.1;
+    opacity: .1;
   }
   35% {
-    width: 15px;
-    opacity: 0.5;
+    width: 25px;
+    opacity: .6;
   }
   70% {
-    width: 30px;
-    opacity: .9;
+    width: 40px;
+    opacity: .8;
   }
   100% {
     width: 45px;
@@ -849,15 +855,15 @@ footer ul li i {
 @keyframes anim-line {
   0% {
     width: 0px;
-    opacity: 0.1;
+    opacity: .1;
   }
   35% {
-    width: 15px;
-    opacity: 0.5;
+    width: 25px;
+    opacity: .6;
   }
   70% {
-    width: 30px;
-    opacity: .9;
+    width: 40px;
+    opacity: .8;
   }
   100% {
     width: 45px;
@@ -935,11 +941,11 @@ footer ul li i {
 .dish-container__check .fa-check-circle {
   margin-top: 25px;
   opacity: 0;
-  -webkit-transition: all 500ms;
-  transition: all 500ms;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
 }
 
-.dish-container:hover .dish-container__check {
+.dish-container:hover .dish-container__check, .dish-container:active .dish-container__check {
   opacity: 1;
   -webkit-transform: translateX(0px);
           transform: translateX(0px);
@@ -948,7 +954,7 @@ footer ul li i {
   text-align: center;
 }
 
-.dish-container:hover .dish-container__check .fa-check-circle {
+.dish-container:hover .dish-container__check .fa-check-circle, .dish-container:active .dish-container__check .fa-check-circle {
   -webkit-animation: anim-circle 300ms ease-in both;
           animation: anim-circle 300ms ease-in both;
 }
