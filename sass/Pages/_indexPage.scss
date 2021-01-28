@@ -98,20 +98,17 @@
     }
 }
 
-
-@media all and (min-width: 1000px) {
-    .navigation {
-        .description {
-            height: 220px;
-        }
+// Restaurant section index
+.mid-section {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: $bg-color;
+    height: 1225px;
+    h2 {
+        align-self: start;
+        margin-left: 20px;
+        margin-top: 50px;
     }
 }
-
-@media all and (min-width: 2400px) {
-    .navigation, .head-section {
-        width: 90%;
-        margin: auto;
-    }
-}
-
-

@@ -1,20 +1,6 @@
-// Restaurant section index
-.mid-section {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: $bg-color;
-    height: 1225px;
-    h2 {
-        align-self: start;
-        margin-left: 20px;
-        margin-top: 50px;
-    }
-}
-
 .cards {
     width: 90%;
+    max-width: 400px;
     height: 250px;
     border-radius: 15px;
     background-color: #fff;
@@ -54,7 +40,6 @@
     }
 }
 
-
 .new-restaurant {
     display: flex;
     flex-flow: row wrap;
@@ -72,45 +57,3 @@
         padding-top: 5px;
     }
 }
-
-@media all and (min-width: 520px) {
-    .mid-section {
-        width: 100%;
-        margin: auto;
-    }
-}
-
-@media all and (min-width: 760px) {
-    .mid-section {
-        justify-content: center;
-        width: 100%;
-        margin: auto;
-
-        .cards {
-            width: 400px;
-        }
-    }
-}
-
-@media all and (min-width: 1440px) {
-    .mid-section {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
-        height: 750px;
-        width: 100%;
-        h2 {
-            width: 100%;
-        }
-    }
-
-    .cards {
-        width: 400px;
-    }
-}
-@media all and (min-width: 2400px) {
-    .mid-section {
-        width: 90%;
-    }
-}
-
