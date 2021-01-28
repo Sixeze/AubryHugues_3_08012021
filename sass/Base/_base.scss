@@ -2,11 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
-
 * {
     box-sizing: border-box;
     padding: 0px;
 }
+
 body {
     width: 100%;
     margin: auto;
@@ -25,24 +25,10 @@ li {
     list-style-type: none;
 }
 
-a, a:hover, a:active, a:focus, *:focus {
-    outline: 0;
+a, a:hover, a:active {
     text-decoration: none;
+}
+
+a {
     color: black;
-}
-
-
-
-@media all and (min-width: 520px) {
-    .block-page {
-        width: 70%;
-        margin: auto;
-    }
-}
-
-@media all and (min-width: 1670px) {
-    .block-page {
-        width: 50%;
-        margin: auto;
-    }
 }

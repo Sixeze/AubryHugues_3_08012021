@@ -1,6 +1,7 @@
 .btn {
     font-weight: 500;
     font-size: 16px;
+    height: 50px;
     background: linear-gradient($secondary-color, $primary-color);
     border-radius: 50px;
     box-shadow: 2px 2px 4px 0px gray;
@@ -18,14 +19,13 @@
         box-shadow: 2px 2px 4px 1px $primary-color;
     }
 }
+
 .index-btn {
     width: 220px;
-    height: 50px;
 }
 
 .menu-btn {
     align-self: center;
     margin-top: 50px;
     width: 180px;
-    height: 50px;
 }

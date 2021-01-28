@@ -8,6 +8,7 @@
     }
 }
 
+// page restaurant menu
 .main-menu {
     position: relative;
     @include column-flex();
@@ -82,6 +83,7 @@
     height: 65px;
     width: 90%;
     display: flex;
+    overflow: hidden;
     &__txt {
         display: flex;
         flex-flow: column nowrap;
@@ -115,8 +117,7 @@
         color: #fff;
         width: 0px;
         height: 65px;
-        opacity: 0;
-        transform: translate(0px);
+        background-color: $terciary-color;
         transition: all 300ms cubic-bezier(.32,0,.07,1);
         .fa-check-circle {
             margin-top: 25px;
@@ -125,9 +126,6 @@
         }
     }
     &:hover .dish-container__check, &:active .dish-container__check {
-        opacity: 1;
-        transform: translateX(0px);
-        background-color: $terciary-color;
         width: 80px;
         text-align: center;
         .fa-check-circle {
@@ -147,26 +145,32 @@
         opacity: 1;
     }
 }
+
 .appear-container {
         width: 100%;
         @include column-flex();
 }
+
 .dish-container:nth-child(1) {
     transform-origin: top;
     animation: fadein-menu 800ms  1000ms ease both;
 }
+
 .dish-container:nth-child(2) {
     transform-origin: top;
     animation: fadein-menu 800ms  1200ms ease both;
 }
+
 .dish-container:nth-child(3) {
     transform-origin: top;
     animation: fadein-menu 800ms  1400ms ease both;
 }
+
 .dish-container:nth-child(4) {
     transform-origin: top;
     animation: fadein-menu 800ms  1600ms ease both;
 }
+
 @keyframes fadein-menu {
     from {
         opacity:0;
@@ -175,40 +179,5 @@
     to {
         opacity:1;
         transform: translateY(0px)
-    }
-}
-
-@media all and (min-width: 375px) {
-    .main-menu {
-        .Heart-container {
-            right: 10%;
-        }
-    }
-}
-
-@media all and (min-width: 520px) {
-    .main-menu {
-        h1 {
-        width: 350px;
-        margin-left: 20%;
-        }
-    }
-
-    .menu-choice {
-        width: 70%;
-        align-self: center;
-    }
-
-}
-
-@media all and (min-width: 1440px) {
-    .background, .main-menu {
-        width: 70%;
-        margin: auto;
-    }
-
-    .menu-choice {
-        width: 55%;
-        align-self: center;
     }
 }

@@ -2,16 +2,128 @@
 @import "./Utils/mixin";
 @import "./Base/base";
 @import "./Composants/button";
+@import "./Composants/cards";
+@import "./Composants/heart";
+@import "./Composants/load";
 @import "./Layout/header";
-@import "./Layout/animationHeart";
 @import "./Layout/footer";
 @import "./Pages/indexPage";
-@import "./Pages/indexLoad";
-@import "./Pages/indexCards";
 @import "./Layout/restaurantMenu";
 
+@media all and (min-width: 375px) {
+    .main-menu {
+        .Heart-container {
+            right: 10%;
+        }
+    }
+}
 
+@media all and (min-width: 520px) {
+    body {
+        background: linear-gradient($secondary-color, $primary-color);
+    }
 
+    .block-page {
+        width: 70%;
+        margin: auto;
+        background: #fff;
+    }
+
+    .mid-section {
+        width: 100%;
+        margin: auto;
+    }
+
+    .main-menu {
+        h1 {
+        width: 350px;
+        margin-left: 20%;
+        }
+    }
+
+    .menu-choice {
+        width: 70%;
+        align-self: center;
+    }
+
+    footer {
+        padding-left: 13%;
+    }
+}
+
+@media all and (min-width: 760px) {
+    .mid-section {
+        justify-content: center;
+        width: 100%;
+        margin: auto;
+
+        .cards {
+            width: 400px;
+        }
+    }
+}
+
+@media all and (min-width: 1024px) {
+    .block-page {
+        width: 50%;;
+    }
+
+    .navigation {
+        .description {
+            height: 250px;
+        }
+    }
+
+    footer {
+        padding-left: 24%;
+    }
+}
+
+@media all and (min-width: 1440px) {
+    .block-page {
+        width: 50%;
+    }
+
+    .mid-section {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        width: 100%;
+        padding-bottom: 50px;
+        h2 {
+            width: 100%;
+        }
+    }
+
+    .background {
+        height: 370px;
+        &__image {
+            height: 320px;
+        }
+    }
+
+    .menu-choice {
+        width: 55%;
+        align-self: center;
+    }
+}
+
+@media all and (min-width: 1670px) {
+    .block-page {
+        width: 40%;
+    }
+
+    .background {
+        height: 550px;
+        &__image {
+            height: 500px;
+        }
+    }
+
+    footer {
+        padding-left: 30%;
+    }
+}
 
 
 
