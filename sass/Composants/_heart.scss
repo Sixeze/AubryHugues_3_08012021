@@ -10,7 +10,8 @@
     transition: all 1000ms;
 }
 
-.custom-checkbox:active + .custom-checkbox__check, .custom-checkbox__input:checked + .custom-checkbox__check {
+.custom-checkbox:active+.custom-checkbox__check,
+.custom-checkbox__input:checked+.custom-checkbox__check {
     outline: 0;
     fill: url(#grad1);
     stroke: none;
@@ -20,7 +21,7 @@
 
 .stop1 {
     stop-color: $primary-color;
-  }
+}
 
 .stop2 {
     stop-color: $secondary-color;
@@ -32,9 +33,10 @@ input[type="checkbox"] {
 
 @keyframes animate-heart {
     0% {
-       opacity: 0;
+        opacity: 0;
     }
-    100%{
+
+    100% {
         opacity: 1;
     }
 }

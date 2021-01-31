@@ -13,7 +13,8 @@ body {
     -webkit-tap-highlight-color: transparent;
 }
 
-body, .head-h1 {
+body,
+.head-h1 {
     font-family: 'Roboto', 'Open Sans', 'Trebuchet MS', Arial, sans-serif;
 }
 
@@ -25,7 +26,9 @@ li {
     list-style-type: none;
 }
 
-a, a:hover, a:active {
+a,
+a:hover,
+a:active {
     text-decoration: none;
 }
 
