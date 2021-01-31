@@ -7,23 +7,30 @@ footer {
     align-items: flex-start;
     background-color: rgb(66, 65, 65);
     height: 200px;
+
     .logo {
         margin: 20px;
         margin-bottom: -10px;
         width: 100px;
     }
+
     .color-logo {
         fill: white;
     }
+
     ul {
         height: 150px;
         margin-left: 20px;
+
         li {
             margin-bottom: 10px;
-            a, i {
+
+            a,
+            i {
                 width: 20px;
                 color: #fff;
             }
+
             i {
                 text-align: start;
                 font-size: 0.8rem;

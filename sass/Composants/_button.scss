@@ -11,7 +11,9 @@
     cursor: pointer;
     transform: scale(1);
     transition: all 500ms;
-    &:hover, &:active {
+
+    &:hover,
+    &:active {
         transform: scale(1);
         opacity: 0.9;
         background: radial-gradient(circle, $secondary-color 0%, $primary-color 100%);

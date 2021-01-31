@@ -1,6 +1,7 @@
 // page restaurant image-bg
 .background {
     height: 300px;
+
     &__image {
         object-fit: cover;
         width: 100%;
@@ -17,12 +18,14 @@
     bottom: 85px;
     background-color: $bg-color;
     border-radius: 40px 40px 0px 0px;
+
     h1 {
         align-self: start;
         font-size: 1.7rem;
         margin-left: 20px;
         margin-top: 30px;
     }
+
     .Heart-container {
         position: absolute;
         right: 4vw;
@@ -34,16 +37,19 @@
     width: 100%;
     @include column-flex();
     margin-top: 5px;
+
     &__head {
         align-self: start;
         position: relative;
         margin-left: 15px;
         height: 45px;
         text-align: center;
+
         h2 {
             font-size: 1rem;
             text-transform: uppercase;
         }
+
         .green-line {
             position: absolute;
             bottom: 1px;
@@ -54,19 +60,22 @@
     }
 }
 
-@keyframes anim-line{
+@keyframes anim-line {
     0% {
         width: 0px;
         opacity: .1;
     }
+
     35% {
         width: 25px;
         opacity: .6;
     }
+
     70% {
         width: 40px;
         opacity: .8;
     }
+
     100% {
         width: 45px;
         opacity: 1;
@@ -74,60 +83,71 @@
 }
 
 .dish-container {
+    display: flex;
     position: relative;
+    overflow: hidden;
     cursor: pointer;
+    width: 90%;
+    height: 65px;
     border-radius: 15px;
     margin: 10px 5px;
     background-color: #fff;
     box-shadow: 3px 3px 5px 2px #e6e6e6;
-    height: 65px;
-    width: 90%;
-    display: flex;
-    overflow: hidden;
+
     &__txt {
         display: flex;
         flex-flow: column nowrap;
         justify-content: flex-start;
-        padding-top: 10px;
         width: 90%;
         height: 80px;
+        padding-top: 10px;
         white-space: nowrap;
         overflow-x: hidden;
-        h3, p {
+
+        h3,
+        p {
             margin: 0px;
             padding-left: 15px;
             padding-top: 4px;
             overflow-x: hidden;
             text-overflow: ellipsis;
         }
+
         h3 {
             font-size: 1.1rem;
         }
+
         p {
             font-size: 0.9rem;
         }
     }
+
     &__price {
         padding-top: 40px;
         font-weight: bold;
         width: 50px;
     }
+
     &__check {
-        border-radius:0px 15px 15px 0px;
+        border-radius: 0px 15px 15px 0px;
         color: #fff;
         width: 0px;
         height: 65px;
         background-color: $terciary-color;
-        transition: all 300ms cubic-bezier(.32,0,.07,1);
+        transition: all 300ms cubic-bezier(.32, 0, .07, 1);
+
         .fa-check-circle {
             margin-top: 25px;
             opacity: 0;
             transition: all 300ms;
         }
     }
-    &:hover .dish-container__check, &:active .dish-container__check {
+
+    &:hover .dish-container__check,
+    &:active .dish-container__check {
         width: 80px;
         text-align: center;
+
         .fa-check-circle {
             animation: anim-circle 300ms ease-in both;
         }
@@ -136,7 +156,7 @@
 
 @keyframes anim-circle {
     0% {
-        transform:  scale(1.3) rotate(90deg);
+        transform: scale(1.3) rotate(90deg);
         opacity: 0;
     }
 
@@ -147,37 +167,38 @@
 }
 
 .appear-container {
-        width: 100%;
-        @include column-flex();
+    @include column-flex();
+    width: 100%;
 }
 
 .dish-container:nth-child(1) {
     transform-origin: top;
-    animation: fadein-menu 800ms  1000ms ease both;
+    animation: fadein-menu 800ms 1000ms ease both;
 }
 
 .dish-container:nth-child(2) {
     transform-origin: top;
-    animation: fadein-menu 800ms  1200ms ease both;
+    animation: fadein-menu 800ms 1200ms ease both;
 }
 
 .dish-container:nth-child(3) {
     transform-origin: top;
-    animation: fadein-menu 800ms  1400ms ease both;
+    animation: fadein-menu 800ms 1400ms ease both;
 }
 
 .dish-container:nth-child(4) {
     transform-origin: top;
-    animation: fadein-menu 800ms  1600ms ease both;
+    animation: fadein-menu 800ms 1600ms ease both;
 }
 
 @keyframes fadein-menu {
     from {
-        opacity:0;
+        opacity: 0;
         transform: translateY(10px);
     }
+
     to {
-        opacity:1;
+        opacity: 1;
         transform: translateY(0px)
     }
 }

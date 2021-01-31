@@ -5,20 +5,20 @@
     top: 50%;
     left: 50%;
     border-radius: 50%;
-    filter: drop-shadow(0px 0px 2px $terciary-color);
     z-index: -1;
     transform: translateY(-50%) translateX(-50%);
     animation: fade-out 2000ms 2200ms both;
 }
 
-@keyframes fade-out{
+@keyframes fade-out {
     0% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
-        }
     }
+}
 
 .border {
     position: relative;
@@ -68,17 +68,19 @@
     0% {
         transform: rotate(0deg);
         filter: drop-shadow(0px 0px 5px $terciary-color);
-        opacity:.5;
+        opacity: .5;
     }
+
     50% {
         transform: rotate(360deg);
         filter: drop-shadow(0px 0px 15px $secondary-color);
-        opacity:.7;
+        opacity: .7;
     }
+
     100% {
         transform: rotate(720deg);
         filter: drop-shadow(0px 0px 10px $primary-color);
-        opacity:.9;
+        opacity: .9;
     }
 }
 
@@ -89,16 +91,16 @@
     animation: fade-in 3000ms 3000ms both;
 }
 
-@keyframes fade-in{
-0% {
-    opacity: 0;
-}
-
-90% {
-    opacity: 1;
+@keyframes fade-in {
+    0% {
+        opacity: 0;
     }
 
-100% {
-    opacity: 1;
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
